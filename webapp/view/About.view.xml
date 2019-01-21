@@ -8,10 +8,10 @@
 		<customHeader>
 			<Bar>
 				<contentRight>
-					<Button id="edit" text="Edit" enabled="false" press="handleEditPress" />
-					<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
-					<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
-					<Button id="back" text="Back" visible="true" press="onBack" />
+					<Button id="edit" text="{i18n>BtnEdit}" enabled="false" press="handleEditPress" />
+					<Button id="save" text="{i18n>BtnSave}" type="Emphasized" visible="false" press="handleSavePress" />
+					<Button id="cancel" text="{i18n>BtnCancel}" visible="false" press="handleCancelPress" />
+					<Button id="back" text="{i18n>BtnBack}" visible="true" press="onBack" />
 				</contentRight>
 			</Bar>
 		</customHeader>

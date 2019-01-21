@@ -7,7 +7,7 @@
 		<f:SimpleForm id="SimpleFormChange354wideDual"
 			editable="true"
 			layout="ResponsiveGridLayout"
-			title="Contact"
+			title="{i18n>ContactTitle}"
 			labelSpanXL="4"
 			labelSpanL="3"
 			labelSpanM="4"
@@ -22,10 +22,10 @@
 			columnsM="1"
 			singleContainerFullSize="false" >
 			<f:content>
-				<core:Title text="Address" />
-				<Label text="Full name of the contact" />
+				<core:Title text="{i18n>AddressTitle}" />
+				<Label text="{i18n>layoutFormName}" />
 				<Input id="name" value="{SupplierName}" />
-				<Label text="Street and number where the contact is located" />
+				<Label text="{i18n>layoutFormStreet}" />
 				<Input value="{Street}">
 				</Input>
 				<Input value="{HouseNumber}">
@@ -33,14 +33,14 @@
 						<l:GridData span="XL2 L1 M3 S4" />
 					</layoutData>
 				</Input>
-				<Label text="ZIP Code and City" />
+				<Label text="{i18n>layoutFormZIPCode}" />
 				<Input value="{ZIPCode}">
 					<layoutData>
 						<l:GridData span="XL2 L1 M3 S4" />
 					</layoutData>
 				</Input>
 				<Input value="{City}" />
-				<Label text="Country where the contact is located" />
+				<Label text="{i18n>layoutFormCountry}" />
 				<Select id="country" selectedKey="{Country}">
 					<items>
 						<core:Item text="Belarus" key="Belarus"/>
@@ -49,9 +49,9 @@
 					</items>
 				</Select>
 				<core:Title text="Online" />
-				<Label text="Web page of the contact" />
+				<Label text="{i18n>WebPage}" />
 				<Input value="{Url}" />
-				<Label text="Twitter account of the contact" />
+				<Label text="Twitter" />
 				<Input value="{Twitter}" />
 			</f:content>
 		</f:SimpleForm>

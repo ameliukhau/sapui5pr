@@ -7,7 +7,7 @@
 		<f:SimpleForm id="SimpleFormDisplay354wideDual"
 			editable="false"
 			layout="ResponsiveGridLayout"
-			title="Contact"
+			title="{i18n>ContactTitle}"
 			labelSpanXL="4"
 			labelSpanL="3"
 			labelSpanM="4"
@@ -22,19 +22,19 @@
 			columnsM="1"
 			singleContainerFullSize="false" >
 			<f:content>
-				<core:Title text="Address" />
-				<Label text="Full name of the contact" />
+				<core:Title text="{i18n>AddressTitle}" />
+				<Label text="{i18n>layoutFormName}" />
 				<Text id="nameText" text="{SupplierName}" />
-				<Label text="Street and number where the contact is located" />
+				<Label text="{i18n>layoutFormStreet}" />
 				<Text text="{Street} {HouseNumber}" />
-				<Label text="ZIP Code and City" />
+				<Label text="{i18n>layoutFormZIPCode}" />
 				<Text text="{ZIPCode} {City}" />
-				<Label text="Country where the contact is located" />
+				<Label text="{i18n>layoutFormCountry}" />
 				<Text id="countryText" text="{Country}" />
 				<core:Title text="Online" />
-				<Label text="Web page of the contact" />
+				<Label text="{i18n>WebPage}" />
 				<Text text="{Url}" />
-				<Label text="Twitter account of the contact" />
+				<Label text="Twitter" />
 				<Text text="{Twitter}" />
 			</f:content>
 		</f:SimpleForm>

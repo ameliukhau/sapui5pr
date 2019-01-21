@@ -8,12 +8,12 @@
 	controllerName="opensap.myapp.controller.App">
 	<App id="App">
 		<pages>
-			<Page title="IBA practic project">
+			<Page title="{i18n>MainPageTitle}">
 			<customHeader>
 			<Toolbar>
 				<Button icon="sap-icon://hide" press="onPressHideDetails"/>
 				<ToolbarSpacer/>
-				<Title text="IBA practic project" level="H2"/>
+				<Title text="{i18n>MainPageTitle}" level="H2"/>
 				<ToolbarSpacer/>
 				<Button icon="sap-icon://globe" press="onPress1" ariaLabelledBy="editButtonLabel"/>
 			</Toolbar>
@@ -22,8 +22,8 @@
 			<subHeader>
 			<Toolbar>
 				<ToolbarSpacer/>
-				<Button text="Table" press="onPressToTable" />
-				<Button text="About" press="onPressToAboutPage" />
+				<Button text="{i18n>BtnTable}" press="onPressToTable" />
+				<Button text="{i18n>BtnAbout}" press="onPressToAboutPage" />
 				<Button icon="sap-icon://action" press="onPress3" ariaLabelledBy="actionButtonLabel"/>
 				<ToolbarSpacer/>
 			</Toolbar>
@@ -57,7 +57,7 @@
 									showIcon="true"
 									text="Here's a Form whith contact details"/>	-->
 								<f:SimpleForm id="simpleFormChange"
-									title="Adress"
+									title="{i18n>TabContactTitle}"
 									editable="true"
 									class="editableForm sapUiSmallMarginTopBottom">
 									<f:content>
