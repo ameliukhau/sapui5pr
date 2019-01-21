@@ -1,0 +1,17 @@
+{
+	"SupplierCollection": [
+		{
+			"SupplierName": "Andrei Meliukhau",
+			"Street": "My Str",
+			"HouseNumber": "32",
+			"ZIPCode": "246000",
+			"City": "Gomel",
+			"Country": "Belarus",
+			"Url": "https://www.sap.com",
+			"Twitter": "@sap",
+			"Tel" : "+375292222137",
+			"Sms" : "+49 173 123456",
+			"Email" : "ameliukhau@gmail.com"
+		}
+	]
+}

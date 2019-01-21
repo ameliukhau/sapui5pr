@@ -1,0 +1,156 @@
+{
+	"_version": "1.3.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "opensap.myapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"description": "{{appDescription}}",
+		"title": "{{appTitle}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"ES5": {
+				"uri": "/destinations/ES5/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"rootView": {
+			"viewName": "opensap.myapp.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"handleValidation": true,
+		"autoPrefixId": true,
+		"dependencies": {
+            "minUI5Version": "1.34",
+            "libs": {
+				"sap.ui.core": {
+					"minVersion": "1.34.0"
+				},
+				"sap.m": {
+					"minVersion": "1.34.0"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.34.0"
+				}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "opensap.myapp.i18n.i18n"
+				}
+			},
+			"" : {
+				"dataSource": "ES5",
+				"settings": {
+					"defaultBindingMode": "TwoWay"
+				}
+			},
+			"address": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Address.json"
+			}
+		},
+		"routing": {
+		  "config": {
+			"routerClass": "sap.m.routing.Router",
+			"viewType": "XML",
+			"viewPath": "opensap.myapp.view",
+			"controlId": "App",
+			"controlAggregation": "pages",
+			"async": true
+		  },
+		  "routes": [
+			{
+				"pattern": "main",
+				"name": "main",
+				"target": "main1"
+			  },
+			{
+			  "pattern": "about",
+			  "name": "about",
+			  "target": "about"
+			},
+			{
+				"pattern": "table",
+				"name": "table",
+				"target": "table"
+			  },
+			  {
+				"pattern": "ProductSet/{objectId}",
+				"name": "object",
+				"target": "object"
+			},
+			  {
+				"pattern": "add",
+				"name": "add",
+				"target": "add"
+			  },
+			  {
+				"pattern": "productdetails",
+				"name": "productdetails",
+				"target": "productdetails"
+			  }
+		  ],
+		  "targets": {
+			"main": {
+				"viewName": "App",
+				"viewId": "main",
+				"viewLevel": 5
+			},
+				"about": {
+					"viewName": "About",
+					"viewId": "about",
+					"viewLevel": 4
+				},
+				"table": {
+					"viewName": "Table",
+					"viewId": "table",
+					"viewLevel": 3
+				},
+				"object": {
+					"viewName": "Object",
+					"viewId": "object",
+					"viewLevel": 2
+				},
+				"add": {
+					"viewName": "Add",
+					"viewId": "add",
+					"viewLevel": 1
+				},
+				"productetails": {
+					"viewName": "ProductDetails",
+					"viewId": "productdetails",
+					"viewLevel": 0
+				}
+		  }
+		},
+		
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	}
+}
