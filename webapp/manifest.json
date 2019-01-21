@@ -86,7 +86,7 @@
 			{
 				"pattern": "main",
 				"name": "main",
-				"target": "main1"
+				"target": "main"
 			  },
 			{
 			  "pattern": "about",
