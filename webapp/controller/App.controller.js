@@ -58,6 +58,15 @@ sap.ui.define([
 		},
 		onPressToTable: function() {
 			this.getOwnerComponent().getRouter().navTo("table");
+		},
+
+		onPressLangChange: function() {
+			var oGetLang = sap.ui.getCore().getConfiguration().getLanguage();
+			if (oGetLang == "ru") {
+				sap.ui.getCore().getConfiguration().setLanguage("en_US");	
+			} else {
+				sap.ui.getCore().getConfiguration().setLanguage("ru");	
+			}	
 		}
 		
 	});

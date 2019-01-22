@@ -15,7 +15,7 @@
 				<ToolbarSpacer/>
 				<Title text="{i18n>MainPageTitle}" level="H2"/>
 				<ToolbarSpacer/>
-				<Button icon="sap-icon://globe" press="onPress1" ariaLabelledBy="editButtonLabel"/>
+				<Button icon="sap-icon://globe" press="onPressLangChange" ariaLabelledBy="editButtonLabel"/>
 			</Toolbar>
 
 		</customHeader>
