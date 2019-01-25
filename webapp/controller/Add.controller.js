@@ -7,22 +7,10 @@ sap.ui.define([
 
 	return BaseController.extend("opensap.myapp.controller.Add", {
 
-		/* =========================================================== */
-		/* lifecycle methods                                           */
-		/* =========================================================== */
-
-		/**
-		 * Called when the add controller is instantiated.
-		 * @public
-		 */
 		onInit: function() {
 			// Register to the add route matched
 			this.getRouter().getRoute("add").attachPatternMatched(this._onRouteMatched, this);
 		},
-
-		/* =========================================================== */
-		/* event handlers                                              */
-		/* =========================================================== */
 
 		_onRouteMatched: function() {
 			// register for metadata loaded events
@@ -36,7 +24,7 @@ sap.ui.define([
 				ProductID: "" + parseInt(Math.random() * 1000000000, 10),
 				TypeCode: "PR",
 				TaxTarifCode: 1,
-				CurrencyCode: "EUR",
+				CurrencyCode: "BYN",
 				MeasureUnit: "EA",
 				WeightUnit: "KG"
 			};
@@ -68,28 +56,14 @@ sap.ui.define([
 			});
 		},
 
-		/**
-		 * Event handler for the cancel action
-		 * @public
-		 */
 		onCancel: function() {
 			this.onNavBack();
 		},
 
-		/**
-		 * Event handler for the save action
-		 * @public
-		 */
 		onSave: function() {
 			this.getModel().submitChanges();
 		},
 
-		/**
-		 * Event handler for navigating back.
-		 * It checks if there is a history entry. If yes, history.go(-1) will happen.
-		 * If not, it will replace the current entry of the browser history with the worklist route.
-		 * @public
-		 */
 		onNavBack : function() {
 			var oHistory = History.getInstance(),
 				sPreviousHash = oHistory.getPreviousHash();

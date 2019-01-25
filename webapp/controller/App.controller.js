@@ -33,29 +33,17 @@ sap.ui.define([
 			if (sQuery) {
 				aFilter.push(new Filter("ProductID", FilterOperator.Contains, sQuery));
 			}
-			// apply filter. an empty filter array simply removes the filter
-			// which will make all entries visible again
 			oBinding.filter(aFilter);
 		},
 
-		onPressHideDetails :function(oEvent){
-			var oSelectedItem = oEvent.getSource();
+		onPressHideDetails :function() {
 			this.byId("productDetailsPanel").setVisible(false)
 		},
-		/*
-		onPressToAboutPage : function () {
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("about");
-		}	
-		*/
-		/*
-		getRouter : function () {
-			return sap.ui.core.UIComponent.getRouterFor(this);
-		},
-		*/
+
 		onPressToAboutPage: function() {
 			this.getOwnerComponent().getRouter().navTo("about");
 		},
+
 		onPressToTable: function() {
 			this.getOwnerComponent().getRouter().navTo("table");
 		},

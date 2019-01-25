@@ -83,14 +83,7 @@
 										</Select>
 									</f:content>
 								</f:SimpleForm>
-								<Toolbar>
-									<ToolbarSpacer/>
-									<Button
-										text="{i18n>layoutDraftButton}"
-										icon="sap-icon://save"
-										type="Accept"/>
-										
-								</Toolbar>
+								
 							</IconTabFilter>
 							<IconTabFilter
 				text="{i18n>dataBindingFilter}" key="db">
