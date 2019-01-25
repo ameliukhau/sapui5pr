@@ -3,8 +3,9 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "opensap/myapp/model/formatter",
     "sap/ui/model/Filter",
-    "sap/ui/model/FilterOperator"
-], function (BaseController, JSONModel, formatter, Filter, FilterOperator) {
+    "sap/ui/model/FilterOperator",
+    "sap/m/MessageBox"
+], function (BaseController, JSONModel, formatter, Filter, FilterOperator, MessageBox) {
     "use strict";
 
     return BaseController.extend("opensap.myapp.controller.Table", {
@@ -128,6 +129,24 @@ sap.ui.define([
             }
 
         },
+        onDeleteItem: function(oEvent) {
+			var controller = this;
+			var oModel = this.getView().getModel();
+			var sPath = oEvent.getParameter("listItem").getBindingContextPath();
+			var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
+			
+			controller.byId("table").setBusy(true);
+			oModel.remove(sPath, {
+				success: function() {
+					MessageBox.success( oResourceBundle.getText("deleteSaleItemSuccess"));
+					controller.byId("table").setBusy(false);
+				},
+				error: function() {
+					MessageBox.error( oResourceBundle.getText("deleteSaleItemError"));
+					controller.byId("table").setBusy(false);
+				}
+			});
+		},
 
       
         onRefresh : function () {

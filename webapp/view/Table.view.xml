@@ -44,6 +44,8 @@
 					<Table
 						id="table"
 						width="auto"
+						mode="Delete"
+						delete="onDeleteItem"
 						items="{
 							path: '/ProductSet',
 							sorter: {
