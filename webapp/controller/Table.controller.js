@@ -119,7 +119,8 @@ sap.ui.define([
                     } else {
                         oTableSearchState = [ new sap.ui.model.Filter([
                             new sap.ui.model.Filter("Name", sap.ui.model.FilterOperator.Contains, sQuery ),
-                            new sap.ui.model.Filter("ProductID", sap.ui.model.FilterOperator.Contains, sQuery )
+                            new sap.ui.model.Filter("ProductID", sap.ui.model.FilterOperator.Contains, sQuery ),
+                            new sap.ui.model.Filter("SupplierName", sap.ui.model.FilterOperator.Contains, sQuery )
                          ],false)
                       ];
                     }
