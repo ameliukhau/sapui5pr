@@ -22,8 +22,8 @@
 			<subHeader>
 			<Toolbar>
 				<ToolbarSpacer/>
-				<Button text="{i18n>BtnTable}" press="onPressToTable" />
-				<Button text="{i18n>BtnAbout}" press="onPressToAboutPage" />
+				<Button id="btTable" text="{i18n>BtnTable}" press="onPressToTable" />
+				<Button id="btContacts" text="{i18n>BtnAbout}" press="onPressToAboutPage" />
 				<Button icon="sap-icon://action" press="onPress3" ariaLabelledBy="actionButtonLabel"/>
 				<ToolbarSpacer/>
 			</Toolbar>
